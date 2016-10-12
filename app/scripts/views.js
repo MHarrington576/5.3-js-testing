@@ -1,6 +1,9 @@
 var $ = require('jquery');
+var Handlebars= require('handlebars');
+var template = require('../templates/application.hbs/');
 
 function PostView(){
+  $('body').append(template());
   $('body').append('<ul class="posts">');
 }
 
