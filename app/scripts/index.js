@@ -10,4 +10,11 @@ $(function(){
   });
 
   models.Post.fetch();
+
+});
+
+  $('form').on('submit', function(event){
+    event.preventDefault();
+    $(document).trigger('create:post', [{title: "Title", body: "Body"}]);
+  // })
 });
