@@ -9,12 +9,10 @@ $(function(){
     view.showPosts(posts);
   });
 
-  models.Post.fetch();
-
-});
-
-  $('form').on('submit', function(event){
+  $('.submit-post-form').on('submit', function(event){
     event.preventDefault();
     $(document).trigger('create:post', [{title: "Title", body: "Body"}]);
-  // })
+  });
+
+  models.Post.fetch();
 });
